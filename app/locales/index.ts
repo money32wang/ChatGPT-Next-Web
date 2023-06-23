@@ -61,7 +61,7 @@ const DEFAULT_LANG = "en";
 const fallbackLang = en;
 const targetLang = ALL_LANGS[getLang()] as LocaleType;
 
-// if target lang missing some fields, it will use fallback lang string.
+// if target lang missing some fields, it will use fallback lang string
 merge(fallbackLang, targetLang);
 
 export default fallbackLang as LocaleType;
