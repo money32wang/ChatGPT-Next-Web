@@ -160,29 +160,29 @@ const cn = {
       Title: "历史消息长度压缩阈值",
       SubTitle: "当未压缩的历史消息超过该值时，将进行压缩",
     },
-    Token: {
-      Title: "API Key",
-      SubTitle: "使用自己的 Key 可绕过密码访问限制",
-      Placeholder: "OpenAI API Key",
-    },
-    Usage: {
-      Title: "余额查询",
-      SubTitle(used: any, total: any) {
-        return `本月已使用 $${used}，订阅总额 $${total}`;
-      },
-      IsChecking: "正在检查…",
-      Check: "重新检查",
-      NoAccess: "输入 API Key 或访问密码查看余额",
-    },
-    AccessCode: {
-      Title: "访问密码",
-      SubTitle: "管理员已开启加密访问",
-      Placeholder: "请输入访问密码",
-    },
-    Endpoint: {
-      Title: "接口地址",
-      SubTitle: "除默认地址外，必须包含 http(s)://",
-    },
+    // Token: {
+    //   Title: "API Key",
+    //   SubTitle: "使用自己的 Key 可绕过密码访问限制",
+    //   Placeholder: "OpenAI API Key",
+    // },
+    // Usage: {
+    //   Title: "余额查询",
+    //   SubTitle(used: any, total: any) {
+    //     return `本月已使用 $${used}，订阅总额 $${total}`;
+    //   },
+    //   IsChecking: "正在检查…",
+    //   Check: "重新检查",
+    //   NoAccess: "输入 API Key 或访问密码查看余额",
+    // },
+    // AccessCode: {
+    //   Title: "访问密码",
+    //   SubTitle: "管理员已开启加密访问",
+    //   Placeholder: "请输入访问密码",
+    // },
+    // Endpoint: {
+    //   Title: "接口地址",
+    //   SubTitle: "除默认地址外，必须包含 http(s)://",
+    // },
     Model: "模型 (model)",
     Temperature: {
       Title: "随机性 (temperature)",
