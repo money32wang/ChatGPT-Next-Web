@@ -79,14 +79,14 @@ const fr: PartialLocaleType = {
       Title: "Taille des polices",
       SubTitle: "Ajuste la taille de police du contenu de la conversation",
     },
-    Update: {
-      Version: (x: string) => `Version : ${x}`,
-      IsLatest: "Dernière version",
-      CheckUpdate: "Vérifier la mise à jour",
-      IsChecking: "Vérification de la mise à jour...",
-      FoundUpdate: (x: string) => `Nouvelle version disponible : ${x}`,
-      GoToUpdate: "Mise à jour",
-    },
+    // Update: {
+    //   Version: (x: string) => `Version : ${x}`,
+    //   IsLatest: "Dernière version",
+    //   CheckUpdate: "Vérifier la mise à jour",
+    //   IsChecking: "Vérification de la mise à jour...",
+    //   FoundUpdate: (x: string) => `Nouvelle version disponible : ${x}`,
+    //   GoToUpdate: "Mise à jour",
+    // },
     SendKey: "Clé d'envoi",
     Theme: "Thème",
     TightBorder: "Bordure serrée",
@@ -126,25 +126,25 @@ const fr: PartialLocaleType = {
       SubTitle:
         "Comprimera si la longueur des messages non compressés dépasse cette valeur",
     },
-    Token: {
-      Title: "Clé API",
-      SubTitle: "Utilisez votre clé pour ignorer la limite du code d'accès",
-      Placeholder: "Clé OpenAI API",
-    },
-    Usage: {
-      Title: "Solde du compte",
-      SubTitle(used: any, total: any) {
-        return `Épuisé ce mois-ci $${used}, abonnement $${total}`;
-      },
-      IsChecking: "Vérification...",
-      Check: "Vérifier",
-      NoAccess: "Entrez la clé API pour vérifier le solde",
-    },
-    AccessCode: {
-      Title: "Code d'accès",
-      SubTitle: "Contrôle d'accès activé",
-      Placeholder: "Code d'accès requis",
-    },
+    // Token: {
+    //   Title: "Clé API",
+    //   SubTitle: "Utilisez votre clé pour ignorer la limite du code d'accès",
+    //   Placeholder: "Clé OpenAI API",
+    // },
+    // Usage: {
+    //   Title: "Solde du compte",
+    //   SubTitle(used: any, total: any) {
+    //     return `Épuisé ce mois-ci $${used}, abonnement $${total}`;
+    //   },
+    //   IsChecking: "Vérification...",
+    //   Check: "Vérifier",
+    //   NoAccess: "Entrez la clé API pour vérifier le solde",
+    // },
+    // AccessCode: {
+    //   Title: "Code d'accès",
+    //   SubTitle: "Contrôle d'accès activé",
+    //   Placeholder: "Code d'accès requis",
+    // },
     Model: "Modèle",
     Temperature: {
       Title: "Température",

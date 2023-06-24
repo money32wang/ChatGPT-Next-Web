@@ -77,14 +77,14 @@ const cs: PartialLocaleType = {
       Title: "Velikost písma",
       SubTitle: "Nastavení velikosti písma obsahu chatu",
     },
-    Update: {
-      Version: (x: string) => `Verze: ${x}`,
-      IsLatest: "Aktuální verze",
-      CheckUpdate: "Zkontrolovat aktualizace",
-      IsChecking: "Kontrola aktualizace...",
-      FoundUpdate: (x: string) => `Nalezena nová verze: ${x}`,
-      GoToUpdate: "Aktualizovat",
-    },
+    // Update: {
+    //   Version: (x: string) => `Verze: ${x}`,
+    //   IsLatest: "Aktuální verze",
+    //   CheckUpdate: "Zkontrolovat aktualizace",
+    //   IsChecking: "Kontrola aktualizace...",
+    //   FoundUpdate: (x: string) => `Nalezena nová verze: ${x}`,
+    //   GoToUpdate: "Aktualizovat",
+    // },
     SendKey: "Odeslat klíč",
     Theme: "Téma",
     TightBorder: "Těsné ohraničení",
@@ -123,25 +123,25 @@ const cs: PartialLocaleType = {
       SubTitle:
         "Komprese proběhne, pokud délka nekomprimovaných zpráv přesáhne tuto hodnotu",
     },
-    Token: {
-      Title: "API klíč",
-      SubTitle: "Použitím klíče ignorujete omezení přístupového kódu",
-      Placeholder: "Klíč API OpenAI",
-    },
-    Usage: {
-      Title: "Stav účtu",
-      SubTitle(used: any, total: any) {
-        return `Použito tento měsíc $${used}, předplaceno $${total}`;
-      },
-      IsChecking: "Kontroluji...",
-      Check: "Zkontrolovat",
-      NoAccess: "Pro kontrolu zůstatku zadejte klíč API",
-    },
-    AccessCode: {
-      Title: "Přístupový kód",
-      SubTitle: "Kontrola přístupu povolena",
-      Placeholder: "Potřebujete přístupový kód",
-    },
+    // Token: {
+    //   Title: "API klíč",
+    //   SubTitle: "Použitím klíče ignorujete omezení přístupového kódu",
+    //   Placeholder: "Klíč API OpenAI",
+    // },
+    // Usage: {
+    //   Title: "Stav účtu",
+    //   SubTitle(used: any, total: any) {
+    //     return `Použito tento měsíc $${used}, předplaceno $${total}`;
+    //   },
+    //   IsChecking: "Kontroluji...",
+    //   Check: "Zkontrolovat",
+    //   NoAccess: "Pro kontrolu zůstatku zadejte klíč API",
+    // },
+    // AccessCode: {
+    //   Title: "Přístupový kód",
+    //   SubTitle: "Kontrola přístupu povolena",
+    //   Placeholder: "Potřebujete přístupový kód",
+    // },
     Model: "Model",
     Temperature: {
       Title: "Teplota",

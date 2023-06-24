@@ -77,14 +77,14 @@ const ru: PartialLocaleType = {
       Title: "Размер шрифта",
       SubTitle: "Настроить размер шрифта контента чата",
     },
-    Update: {
-      Version: (x: string) => `Версия: ${x}`,
-      IsLatest: "Последняя версия",
-      CheckUpdate: "Проверить обновление",
-      IsChecking: "Проверка обновления...",
-      FoundUpdate: (x: string) => `Найдена новая версия: ${x}`,
-      GoToUpdate: "Обновить",
-    },
+    // Update: {
+    //   Version: (x: string) => `Версия: ${x}`,
+    //   IsLatest: "Последняя версия",
+    //   CheckUpdate: "Проверить обновление",
+    //   IsChecking: "Проверка обновления...",
+    //   FoundUpdate: (x: string) => `Найдена новая версия: ${x}`,
+    //   GoToUpdate: "Обновить",
+    // },
     SendKey: "Клавиша отправки",
     Theme: "Тема",
     TightBorder: "Узкая граница",
@@ -124,25 +124,25 @@ const ru: PartialLocaleType = {
       SubTitle:
         "Будет сжимать, если длина несжатых сообщений превышает указанное значение",
     },
-    Token: {
-      Title: "API ключ",
-      SubTitle: "Используйте свой ключ, чтобы игнорировать лимит доступа",
-      Placeholder: "API ключ OpenAI",
-    },
-    Usage: {
-      Title: "Баланс аккаунта",
-      SubTitle(used: any, total: any) {
-        return `Использовано в этом месяце $${used}, подписка $${total}`;
-      },
-      IsChecking: "Проверка...",
-      Check: "Проверить",
-      NoAccess: "Введите API ключ, чтобы проверить баланс",
-    },
-    AccessCode: {
-      Title: "Код доступа",
-      SubTitle: "Контроль доступа включен",
-      Placeholder: "Требуется код доступа",
-    },
+    // Token: {
+    //   Title: "API ключ",
+    //   SubTitle: "Используйте свой ключ, чтобы игнорировать лимит доступа",
+    //   Placeholder: "API ключ OpenAI",
+    // },
+    // Usage: {
+    //   Title: "Баланс аккаунта",
+    //   SubTitle(used: any, total: any) {
+    //     return `Использовано в этом месяце $${used}, подписка $${total}`;
+    //   },
+    //   IsChecking: "Проверка...",
+    //   Check: "Проверить",
+    //   NoAccess: "Введите API ключ, чтобы проверить баланс",
+    // },
+    // AccessCode: {
+    //   Title: "Код доступа",
+    //   SubTitle: "Контроль доступа включен",
+    //   Placeholder: "Требуется код доступа",
+    // },
     Model: "Модель",
     Temperature: {
       Title: "Температура",

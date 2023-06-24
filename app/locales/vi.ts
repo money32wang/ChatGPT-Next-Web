@@ -77,14 +77,14 @@ const vi: PartialLocaleType = {
       Title: "Font chữ",
       SubTitle: "Thay đổi font chữ của nội dung trò chuyện",
     },
-    Update: {
-      Version: (x: string) => `Phiên bản: ${x}`,
-      IsLatest: "Phiên bản mới nhất",
-      CheckUpdate: "Kiểm tra bản cập nhật",
-      IsChecking: "Kiểm tra bản cập nhật...",
-      FoundUpdate: (x: string) => `Phát hiện phiên bản mới: ${x}`,
-      GoToUpdate: "Cập nhật",
-    },
+    // Update: {
+    //   Version: (x: string) => `Phiên bản: ${x}`,
+    //   IsLatest: "Phiên bản mới nhất",
+    //   CheckUpdate: "Kiểm tra bản cập nhật",
+    //   IsChecking: "Kiểm tra bản cập nhật...",
+    //   FoundUpdate: (x: string) => `Phát hiện phiên bản mới: ${x}`,
+    //   GoToUpdate: "Cập nhật",
+    // },
     SendKey: "Phím gửi",
     Theme: "Theme",
     TightBorder: "Chế độ không viền",
@@ -122,25 +122,25 @@ const vi: PartialLocaleType = {
       Title: "Ngưỡng nén lịch sử tin nhắn",
       SubTitle: "Thực hiện nén nếu số lượng tin nhắn chưa nén vượt quá ngưỡng",
     },
-    Token: {
-      Title: "API Key",
-      SubTitle: "Sử dụng khóa của bạn để bỏ qua giới hạn mã truy cập",
-      Placeholder: "OpenAI API Key",
-    },
-    Usage: {
-      Title: "Hạn mức tài khoản",
-      SubTitle(used: any, total: any) {
-        return `Đã sử dụng $${used} trong tháng này, hạn mức $${total}`;
-      },
-      IsChecking: "Đang kiểm tra...",
-      Check: "Kiểm tra",
-      NoAccess: "Nhập API Key để kiểm tra hạn mức",
-    },
-    AccessCode: {
-      Title: "Mã truy cập",
-      SubTitle: "Đã bật kiểm soát truy cập",
-      Placeholder: "Nhập mã truy cập",
-    },
+    // Token: {
+    //   Title: "API Key",
+    //   SubTitle: "Sử dụng khóa của bạn để bỏ qua giới hạn mã truy cập",
+    //   Placeholder: "OpenAI API Key",
+    // },
+    // Usage: {
+    //   Title: "Hạn mức tài khoản",
+    //   SubTitle(used: any, total: any) {
+    //     return `Đã sử dụng $${used} trong tháng này, hạn mức $${total}`;
+    //   },
+    //   IsChecking: "Đang kiểm tra...",
+    //   Check: "Kiểm tra",
+    //   NoAccess: "Nhập API Key để kiểm tra hạn mức",
+    // },
+    // AccessCode: {
+    //   Title: "Mã truy cập",
+    //   SubTitle: "Đã bật kiểm soát truy cập",
+    //   Placeholder: "Nhập mã truy cập",
+    // },
     Model: "Mô hình",
     Temperature: {
       Title: "Tính ngẫu nhiên (temperature)",

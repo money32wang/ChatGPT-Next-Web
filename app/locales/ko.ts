@@ -77,14 +77,14 @@ const ko: PartialLocaleType = {
       Title: "글꼴 크기",
       SubTitle: "채팅 내용의 글꼴 크기 조정",
     },
-    Update: {
-      Version: (x: string) => `버전: ${x}`,
-      IsLatest: "최신 버전",
-      CheckUpdate: "업데이트 확인",
-      IsChecking: "업데이트 확인 중...",
-      FoundUpdate: (x: string) => `새 버전 발견: ${x}`,
-      GoToUpdate: "업데이트",
-    },
+    // Update: {
+    //   Version: (x: string) => `버전: ${x}`,
+    //   IsLatest: "최신 버전",
+    //   CheckUpdate: "업데이트 확인",
+    //   IsChecking: "업데이트 확인 중...",
+    //   FoundUpdate: (x: string) => `새 버전 발견: ${x}`,
+    //   GoToUpdate: "업데이트",
+    // },
     SendKey: "전송 키",
     Theme: "테마",
     TightBorder: "조밀한 테두리",
@@ -122,25 +122,25 @@ const ko: PartialLocaleType = {
       Title: "기록 압축 임계값",
       SubTitle: "미압축 메시지 길이가 임계값을 초과하면 압축됨",
     },
-    Token: {
-      Title: "API 키",
-      SubTitle: "액세스 코드 제한을 무시하기 위해 키 사용",
-      Placeholder: "OpenAI API 키",
-    },
-    Usage: {
-      Title: "계정 잔액",
-      SubTitle(used: any, total: any) {
-        return `이번 달 사용액 ${used}, 구독액 ${total}`;
-      },
-      IsChecking: "확인 중...",
-      Check: "확인",
-      NoAccess: "잔액 확인을 위해 API 키를 입력하세요.",
-    },
-    AccessCode: {
-      Title: "액세스 코드",
-      SubTitle: "액세스 제어가 활성화됨",
-      Placeholder: "액세스 코드 입력",
-    },
+    // Token: {
+    //   Title: "API 키",
+    //   SubTitle: "액세스 코드 제한을 무시하기 위해 키 사용",
+    //   Placeholder: "OpenAI API 키",
+    // },
+    // Usage: {
+    //   Title: "계정 잔액",
+    //   SubTitle(used: any, total: any) {
+    //     return `이번 달 사용액 ${used}, 구독액 ${total}`;
+    //   },
+    //   IsChecking: "확인 중...",
+    //   Check: "확인",
+    //   NoAccess: "잔액 확인을 위해 API 키를 입력하세요.",
+    // },
+    // AccessCode: {
+    //   Title: "액세스 코드",
+    //   SubTitle: "액세스 제어가 활성화됨",
+    //   Placeholder: "액세스 코드 입력",
+    // },
     Model: "모델",
     Temperature: {
       Title: "온도 (temperature)",

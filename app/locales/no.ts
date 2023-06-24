@@ -69,14 +69,14 @@ const no: PartialLocaleType = {
       Title: "Fontstørrelsen",
       SubTitle: "Juster fontstørrelsen for samtaleinnholdet.",
     },
-    Update: {
-      Version: (x: string) => `Versjon: ${x}`,
-      IsLatest: "Siste versjon",
-      CheckUpdate: "Se etter oppdatering",
-      IsChecking: "Ser etter oppdatering ...",
-      FoundUpdate: (x: string) => `Fant ny versjon: ${x}`,
-      GoToUpdate: "Oppdater",
-    },
+    // Update: {
+    //   Version: (x: string) => `Versjon: ${x}`,
+    //   IsLatest: "Siste versjon",
+    //   CheckUpdate: "Se etter oppdatering",
+    //   IsChecking: "Ser etter oppdatering ...",
+    //   FoundUpdate: (x: string) => `Fant ny versjon: ${x}`,
+    //   GoToUpdate: "Oppdater",
+    // },
     SendKey: "Send nøkkel",
     Theme: "Tema",
     TightBorder: "Stram innramming",
@@ -104,26 +104,26 @@ const no: PartialLocaleType = {
       SubTitle:
         "Komprimer dersom ikke-komprimert lengde på meldinger overskrider denne verdien",
     },
-    Token: {
-      Title: "API Key",
-      SubTitle:
-        "Bruk din egen API-nøkkel for å ignorere tilgangskoden begrensning",
-      Placeholder: "OpenAI API-nøkkel",
-    },
-    Usage: {
-      Title: "Saldo for konto",
-      SubTitle(used: any, total: any) {
-        return `Brukt denne måneden $${used}, abonnement $${total}`;
-      },
-      IsChecking: "Sjekker ...",
-      Check: "Sjekk",
-      NoAccess: "Skriv inn API-nøkkelen for å sjekke saldo",
-    },
-    AccessCode: {
-      Title: "Tilgangskode",
-      SubTitle: "Tilgangskontroll på",
-      Placeholder: "Trenger tilgangskode",
-    },
+    // Token: {
+    //   Title: "API Key",
+    //   SubTitle:
+    //     "Bruk din egen API-nøkkel for å ignorere tilgangskoden begrensning",
+    //   Placeholder: "OpenAI API-nøkkel",
+    // },
+    // Usage: {
+    //   Title: "Saldo for konto",
+    //   SubTitle(used: any, total: any) {
+    //     return `Brukt denne måneden $${used}, abonnement $${total}`;
+    //   },
+    //   IsChecking: "Sjekker ...",
+    //   Check: "Sjekk",
+    //   NoAccess: "Skriv inn API-nøkkelen for å sjekke saldo",
+    // },
+    // AccessCode: {
+    //   Title: "Tilgangskode",
+    //   SubTitle: "Tilgangskontroll på",
+    //   Placeholder: "Trenger tilgangskode",
+    // },
     Model: "Model",
     Temperature: {
       Title: "Temperatur",

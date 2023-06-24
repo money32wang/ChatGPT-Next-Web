@@ -77,14 +77,14 @@ const tr: PartialLocaleType = {
       Title: "Yazı Boyutu",
       SubTitle: "Sohbet içeriğinin yazı boyutunu ayarlayın",
     },
-    Update: {
-      Version: (x: string) => `Sürüm: ${x}`,
-      IsLatest: "En son sürüm",
-      CheckUpdate: "Güncellemeyi Kontrol Et",
-      IsChecking: "Güncelleme kontrol ediliyor...",
-      FoundUpdate: (x: string) => `Yeni sürüm bulundu: ${x}`,
-      GoToUpdate: "Güncelle",
-    },
+    // Update: {
+    //   Version: (x: string) => `Sürüm: ${x}`,
+    //   IsLatest: "En son sürüm",
+    //   CheckUpdate: "Güncellemeyi Kontrol Et",
+    //   IsChecking: "Güncelleme kontrol ediliyor...",
+    //   FoundUpdate: (x: string) => `Yeni sürüm bulundu: ${x}`,
+    //   GoToUpdate: "Güncelle",
+    // },
     SendKey: "Gönder Tuşu",
     Theme: "Tema",
     TightBorder: "Tam Ekran",
@@ -123,25 +123,25 @@ const tr: PartialLocaleType = {
       SubTitle:
         "Sıkıştırılmamış mesajların uzunluğu bu değeri aşarsa sıkıştırılır",
     },
-    Token: {
-      Title: "API Anahtarı",
-      SubTitle: "Erişim kodu sınırını yoksaymak için anahtarınızı kullanın",
-      Placeholder: "OpenAI API Anahtarı",
-    },
-    Usage: {
-      Title: "Hesap Bakiyesi",
-      SubTitle(used: any, total: any) {
-        return `Bu ay kullanılan $${used}, abonelik $${total}`;
-      },
-      IsChecking: "Kontrol ediliyor...",
-      Check: "Tekrar Kontrol Et",
-      NoAccess: "Bakiyeyi kontrol etmek için API anahtarını girin",
-    },
-    AccessCode: {
-      Title: "Erişim Kodu",
-      SubTitle: "Erişim kontrolü etkinleştirme",
-      Placeholder: "Erişim Kodu Gerekiyor",
-    },
+    // Token: {
+    //   Title: "API Anahtarı",
+    //   SubTitle: "Erişim kodu sınırını yoksaymak için anahtarınızı kullanın",
+    //   Placeholder: "OpenAI API Anahtarı",
+    // },
+    // Usage: {
+    //   Title: "Hesap Bakiyesi",
+    //   SubTitle(used: any, total: any) {
+    //     return `Bu ay kullanılan $${used}, abonelik $${total}`;
+    //   },
+    //   IsChecking: "Kontrol ediliyor...",
+    //   Check: "Tekrar Kontrol Et",
+    //   NoAccess: "Bakiyeyi kontrol etmek için API anahtarını girin",
+    // },
+    // AccessCode: {
+    //   Title: "Erişim Kodu",
+    //   SubTitle: "Erişim kontrolü etkinleştirme",
+    //   Placeholder: "Erişim Kodu Gerekiyor",
+    // },
     Model: "Model",
     Temperature: {
       Title: "Gerçeklik",
