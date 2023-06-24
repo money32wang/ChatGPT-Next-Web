@@ -488,78 +488,78 @@ export function Settings() {
         </List>
 
         <List>
-          {showAccessCode ? (
-            <ListItem
-              title={Locale.Settings.AccessCode.Title}
-              subTitle={Locale.Settings.AccessCode.SubTitle}
-            >
-              <PasswordInput
-                value={accessStore.accessCode}
-                type="text"
-                placeholder={Locale.Settings.AccessCode.Placeholder}
-                onChange={(e) => {
-                  accessStore.updateCode(e.currentTarget.value);
-                }}
-              />
-            </ListItem>
-          ) : (
-            <></>
-          )}
+          {/*{showAccessCode ? (*/}
+          {/*  <ListItem*/}
+          {/*    title={Locale.Settings.AccessCode.Title}*/}
+          {/*    subTitle={Locale.Settings.AccessCode.SubTitle}*/}
+          {/*  >*/}
+          {/*    <PasswordInput*/}
+          {/*      value={accessStore.accessCode}*/}
+          {/*      type="text"*/}
+          {/*      placeholder={Locale.Settings.AccessCode.Placeholder}*/}
+          {/*      onChange={(e) => {*/}
+          {/*        accessStore.updateCode(e.currentTarget.value);*/}
+          {/*      }}*/}
+          {/*    />*/}
+          {/*  </ListItem>*/}
+          {/*) : (*/}
+          {/*  <></>*/}
+          {/*)}*/}
 
-          {!accessStore.hideUserApiKey ? (
-            <ListItem
-              title={Locale.Settings.Token.Title}
-              subTitle={Locale.Settings.Token.SubTitle}
-            >
-              <PasswordInput
-                value={accessStore.token}
-                type="text"
-                placeholder={Locale.Settings.Token.Placeholder}
-                onChange={(e) => {
-                  accessStore.updateToken(e.currentTarget.value);
-                }}
-              />
-            </ListItem>
-          ) : null}
+          {/*{!accessStore.hideUserApiKey ? (*/}
+          {/*  <ListItem*/}
+          {/*    title={Locale.Settings.Token.Title}*/}
+          {/*    subTitle={Locale.Settings.Token.SubTitle}*/}
+          {/*  >*/}
+          {/*    <PasswordInput*/}
+          {/*      value={accessStore.token}*/}
+          {/*      type="text"*/}
+          {/*      placeholder={Locale.Settings.Token.Placeholder}*/}
+          {/*      onChange={(e) => {*/}
+          {/*        accessStore.updateToken(e.currentTarget.value);*/}
+          {/*      }}*/}
+          {/*    />*/}
+          {/*  </ListItem>*/}
+          {/*) : null}*/}
 
-          <ListItem
-            title={Locale.Settings.Usage.Title}
-            subTitle={
-              showUsage
-                ? loadingUsage
-                  ? Locale.Settings.Usage.IsChecking
-                  : Locale.Settings.Usage.SubTitle(
-                      usage?.used ?? "[?]",
-                      usage?.subscription ?? "[?]",
-                    )
-                : Locale.Settings.Usage.NoAccess
-            }
-          >
-            {!showUsage || loadingUsage ? (
-              <div />
-            ) : (
-              <IconButton
-                icon={<ResetIcon></ResetIcon>}
-                text={Locale.Settings.Usage.Check}
-                onClick={() => checkUsage(true)}
-              />
-            )}
-          </ListItem>
+          {/*<ListItem*/}
+          {/*  title={Locale.Settings.Usage.Title}*/}
+          {/*  subTitle={*/}
+          {/*    showUsage*/}
+          {/*      ? loadingUsage*/}
+          {/*        ? Locale.Settings.Usage.IsChecking*/}
+          {/*        : Locale.Settings.Usage.SubTitle(*/}
+          {/*            usage?.used ?? "[?]",*/}
+          {/*            usage?.subscription ?? "[?]",*/}
+          {/*          )*/}
+          {/*      : Locale.Settings.Usage.NoAccess*/}
+          {/*  }*/}
+          {/*>*/}
+          {/*  {!showUsage || loadingUsage ? (*/}
+          {/*    <div />*/}
+          {/*  ) : (*/}
+          {/*    <IconButton*/}
+          {/*      icon={<ResetIcon></ResetIcon>}*/}
+          {/*      text={Locale.Settings.Usage.Check}*/}
+          {/*      onClick={() => checkUsage(true)}*/}
+          {/*    />*/}
+          {/*  )}*/}
+          {/*</ListItem>*/}
 
-          {!accessStore.hideUserApiKey ? (
-            <ListItem
-              title={Locale.Settings.Endpoint.Title}
-              subTitle={Locale.Settings.Endpoint.SubTitle}
-            >
-              <input
-                type="text"
-                value={accessStore.openaiUrl}
-                onChange={(e) =>
-                  accessStore.updateOpenAiUrl(e.currentTarget.value)
-                }
-              ></input>
-            </ListItem>
-          ) : null}
+          {/*{!accessStore.hideUserApiKey ? (*/}
+          {/*  <ListItem*/}
+          {/*    title={Locale.Settings.Endpoint.Title}*/}
+          {/*    subTitle={Locale.Settings.Endpoint.SubTitle}*/}
+          {/*  >*/}
+          {/*    <input*/}
+          {/*      type="text"*/}
+          {/*      value={accessStore.openaiUrl}*/}
+          {/*      onChange={(e) =>*/}
+          {/*        accessStore.updateOpenAiUrl(e.currentTarget.value)*/}
+          {/*      }*/}
+          {/*    ></input>*/}
+          {/*  </ListItem>*/}
+          {/*) : null}*/}
         </List>
 
         <List>
