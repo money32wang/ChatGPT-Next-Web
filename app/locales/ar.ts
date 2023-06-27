@@ -120,14 +120,14 @@ const ar: PartialLocaleType = {
       Title: "نموذج الإدخال",
       SubTitle: "سيتم ملء أحدث رسالة في هذا النموذج",
     },
-    Update: {
-      Version: (x: string) => ` الإصدار: ${x}`,
-      IsLatest: "أحدث إصدار",
-      CheckUpdate: "التحقق من التحديث",
-      IsChecking: "جارٍ التحقق من التحديث...",
-      FoundUpdate: (x: string) => ` تم العثور على إصدار جديد: ${x}`,
-      GoToUpdate: "التحديث",
-    },
+    // Update: {
+    //   Version: (x: string) => ` الإصدار: ${x}`,
+    //   IsLatest: "أحدث إصدار",
+    //   CheckUpdate: "التحقق من التحديث",
+    //   IsChecking: "جارٍ التحقق من التحديث...",
+    //   FoundUpdate: (x: string) => ` تم العثور على إصدار جديد: ${x}`,
+    //   GoToUpdate: "التحديث",
+    // },
     SendKey: "مفتاح الإرسال",
     Theme: "السمة",
     TightBorder: "حدود ضيقة",
@@ -165,29 +165,29 @@ ${builtin} مدمجة، ${custom} تم تعريفها من قبل المستخد
       Title: "حد الضغط للتاريخ",
       SubTitle: "سيتم الضغط إذا تجاوزت طول الرسائل غير المضغوطة الحد المحدد",
     },
-    Token: {
-      Title: "مفتاح API",
-      SubTitle: "استخدم مفتاحك لتجاوز حد رمز الوصول",
-      Placeholder: "مفتاح OpenAI API",
-    },
-    Usage: {
-      Title: "رصيد الحساب",
-      SubTitle(used: any, total: any) {
-        return `تم استخدام $${used} من هذا الشهر، الاشتراك ${total}`;
-      },
-      IsChecking: "جارٍ التحقق...",
-      Check: "التحقق",
-      NoAccess: "أدخل مفتاح API للتحقق من الرصيد",
-    },
-    AccessCode: {
-      Title: "رمز الوصول",
-      SubTitle: "تم تمكين التحكم في الوصول",
-      Placeholder: "رمز الوصول المطلوب",
-    },
-    Endpoint: {
-      Title: "نقطة النهاية",
-      SubTitle: "يجب أن تبدأ نقطة النهاية المخصصة بـ http(s)://",
-    },
+    // Token: {
+    //   Title: "مفتاح API",
+    //   SubTitle: "استخدم مفتاحك لتجاوز حد رمز الوصول",
+    //   Placeholder: "مفتاح OpenAI API",
+    // },
+    // Usage: {
+    //   Title: "رصيد الحساب",
+    //   SubTitle(used: any, total: any) {
+    //     return `تم استخدام $${used} من هذا الشهر، الاشتراك ${total}`;
+    //   },
+    //   IsChecking: "جارٍ التحقق...",
+    //   Check: "التحقق",
+    //   NoAccess: "أدخل مفتاح API للتحقق من الرصيد",
+    // },
+    // AccessCode: {
+    //   Title: "رمز الوصول",
+    //   SubTitle: "تم تمكين التحكم في الوصول",
+    //   Placeholder: "رمز الوصول المطلوب",
+    // },
+    // Endpoint: {
+    //   Title: "نقطة النهاية",
+    //   SubTitle: "يجب أن تبدأ نقطة النهاية المخصصة بـ http(s)://",
+    // },
     Model: "النموذج",
     Temperature: {
       Title: "الحرارة",
