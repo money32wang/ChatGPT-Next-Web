@@ -40,14 +40,14 @@ import Locale, {
 } from "../locales";
 import { copyToClipboard } from "../utils";
 import Link from "next/link";
-import { Path, UPDATE_URL } from "../constant";
+import { Path, RELEASE_URL, UPDATE_URL } from "../constant";
 import { Prompt, SearchService, usePromptStore } from "../store/prompt";
 import { ErrorBoundary } from "./error";
 import { InputRange } from "./input-range";
 import { useNavigate } from "react-router-dom";
 import { Avatar, AvatarPicker } from "./emoji";
 import { getClientConfig } from "../config/client";
-import { useSyncStore } from "@/app/store/sync";
+import { useSyncStore } from "../store/sync";
 
 function EditPromptModal(props: { id: number; onClose: () => void }) {
   const promptStore = usePromptStore();
@@ -315,14 +315,14 @@ export function Settings() {
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const config = useAppConfig();
   const updateConfig = config.update;
-  const resetConfig = config.reset;
   const chatStore = useChatStore();
 
   const updateStore = useUpdateStore();
   const [checkingUpdate, setCheckingUpdate] = useState(false);
-  // const currentVersion = formatVersionDate(updateStore.version);
-  // const remoteId = formatVersionDate(updateStore.remoteVersion);
+  // const currentVersion = updateStore.formatVersion(updateStore.version);
+  // const remoteId = updateStore.formatVersion(updateStore.remoteVersion);
   // const hasNewVersion = currentVersion !== remoteId;
+  const updateUrl = getClientConfig()?.isApp ? RELEASE_URL : UPDATE_URL;
 
   function checkUpdate(force = false) {
     setCheckingUpdate(true);
@@ -538,10 +538,12 @@ export function Settings() {
               }
             ></input>
           </ListItem>
+        </List>
 
+        <List>
           <ListItem
-            title={Locale.Settings.Mask.Title}
-            subTitle={Locale.Settings.Mask.SubTitle}
+            title={Locale.Settings.Mask.Splash.Title}
+            subTitle={Locale.Settings.Mask.Splash.SubTitle}
           >
             <input
               type="checkbox"
@@ -551,6 +553,22 @@ export function Settings() {
                   (config) =>
                     (config.dontShowMaskSplashScreen =
                       !e.currentTarget.checked),
+                )
+              }
+            ></input>
+          </ListItem>
+
+          <ListItem
+            title={Locale.Settings.Mask.Builtin.Title}
+            subTitle={Locale.Settings.Mask.Builtin.SubTitle}
+          >
+            <input
+              type="checkbox"
+              checked={config.hideBuiltinMasks}
+              onChange={(e) =>
+                updateConfig(
+                  (config) =>
+                    (config.hideBuiltinMasks = e.currentTarget.checked),
                 )
               }
             ></input>
@@ -577,19 +595,34 @@ export function Settings() {
           {/*)}*/}
 
           {/*{!accessStore.hideUserApiKey ? (*/}
-          {/*  <ListItem*/}
-          {/*    title={Locale.Settings.Token.Title}*/}
-          {/*    subTitle={Locale.Settings.Token.SubTitle}*/}
-          {/*  >*/}
-          {/*    <PasswordInput*/}
-          {/*      value={accessStore.token}*/}
-          {/*      type="text"*/}
-          {/*      placeholder={Locale.Settings.Token.Placeholder}*/}
-          {/*      onChange={(e) => {*/}
-          {/*        accessStore.updateToken(e.currentTarget.value);*/}
-          {/*      }}*/}
-          {/*    />*/}
-          {/*  </ListItem>*/}
+          {/*  <>*/}
+          {/*    <ListItem*/}
+          {/*      title={Locale.Settings.Endpoint.Title}*/}
+          {/*      subTitle={Locale.Settings.Endpoint.SubTitle}*/}
+          {/*    >*/}
+          {/*      <input*/}
+          {/*        type="text"*/}
+          {/*        value={accessStore.openaiUrl}*/}
+          {/*        placeholder="https://api.openai.com/"*/}
+          {/*        onChange={(e) =>*/}
+          {/*          accessStore.updateOpenAiUrl(e.currentTarget.value)*/}
+          {/*        }*/}
+          {/*      ></input>*/}
+          {/*    </ListItem>*/}
+          {/*    <ListItem*/}
+          {/*      title={Locale.Settings.Token.Title}*/}
+          {/*      subTitle={Locale.Settings.Token.SubTitle}*/}
+          {/*    >*/}
+          {/*      <PasswordInput*/}
+          {/*        value={accessStore.token}*/}
+          {/*        type="text"*/}
+          {/*        placeholder={Locale.Settings.Token.Placeholder}*/}
+          {/*        onChange={(e) => {*/}
+          {/*          accessStore.updateToken(e.currentTarget.value);*/}
+          {/*        }}*/}
+          {/*      />*/}
+          {/*    </ListItem>*/}
+          {/*  </>*/}
           {/*) : null}*/}
 
           {/*{!accessStore.hideBalanceQuery ? (*/}
@@ -615,22 +648,6 @@ export function Settings() {
           {/*        onClick={() => checkUsage(true)}*/}
           {/*      />*/}
           {/*    )}*/}
-          {/*  </ListItem>*/}
-          {/*) : null}*/}
-
-          {/*{!accessStore.hideUserApiKey ? (*/}
-          {/*  <ListItem*/}
-          {/*    title={Locale.Settings.Endpoint.Title}*/}
-          {/*    subTitle={Locale.Settings.Endpoint.SubTitle}*/}
-          {/*  >*/}
-          {/*    <input*/}
-          {/*      type="text"*/}
-          {/*      value={accessStore.openaiUrl}*/}
-          {/*      placeholder="https://api.openai.com/"*/}
-          {/*      onChange={(e) =>*/}
-          {/*        accessStore.updateOpenAiUrl(e.currentTarget.value)*/}
-          {/*      }*/}
-          {/*    ></input>*/}
           {/*  </ListItem>*/}
           {/*) : null}*/}
         </List>
