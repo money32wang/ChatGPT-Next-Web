@@ -26,7 +26,7 @@ const cn = {
       Stop: "停止",
       Retry: "重试",
       Pin: "固定",
-      PinToastContent: "已将 2 条对话固定至预设提示词",
+      PinToastContent: "已将 1 条对话固定至预设提示词",
       PinToastAction: "查看",
       Delete: "删除",
       Edit: "编辑",
@@ -66,6 +66,7 @@ const cn = {
       Reset: "清除记忆",
       SaveAs: "存为面具",
     },
+    IsContext: "预设提示词",
   },
   Export: {
     Title: "分享聊天记录",
@@ -139,6 +140,11 @@ const cn = {
       SubTitle: "聊天内容的字体大小",
     },
 
+    InputTemplate: {
+      Title: "用户输入预处理",
+      SubTitle: "用户最新的一条消息会填充到此模板",
+    },
+
     // Update: {
     //   Version: (x: string) => `当前版本：${x}`,
     //   IsLatest: "已是最新版本",
@@ -147,10 +153,6 @@ const cn = {
     //   FoundUpdate: (x: string) => `发现新版本：${x}`,
     //   GoToUpdate: "前往更新",
     // },
-    InputTemplate: {
-      Title: "用户输入预处理",
-      SubTitle: "用户最新的一条消息会填充到此模板",
-    },
     SendKey: "发送键",
     Theme: "主题",
     TightBorder: "无边框模式",
@@ -199,6 +201,7 @@ const cn = {
     //   SubTitle: "使用自己的 Key 可绕过密码访问限制",
     //   Placeholder: "OpenAI API Key",
     // },
+    //
     // Usage: {
     //   Title: "余额查询",
     //   SubTitle(used: any, total: any) {
@@ -217,6 +220,10 @@ const cn = {
     //   Title: "接口地址",
     //   SubTitle: "除默认地址外，必须包含 http(s)://",
     // },
+    CustomModel: {
+      Title: "自定义模型名",
+      SubTitle: "增加自定义模型可选项，使用英文逗号隔开",
+    },
     Model: "模型 (model)",
     Temperature: {
       Title: "随机性 (temperature)",
