@@ -341,6 +341,7 @@ export function Settings() {
     subscription: updateStore.subscription,
   };
   const [loadingUsage, setLoadingUsage] = useState(false);
+
   function checkUsage(force = false) {
     if (accessStore.hideBalanceQuery) {
       return;

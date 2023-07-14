@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import Locale from "./locales";
 
 type Command = (param: string) => void;
+
 interface Commands {
   fill?: Command;
   submit?: Command;
