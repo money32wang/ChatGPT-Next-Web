@@ -8,6 +8,8 @@ interface Commands {
   fill?: Command;
   submit?: Command;
   mask?: Command;
+  code?: Command;
+  settings?: Command;
 }
 
 export function useCommand(commands: Commands = {}) {
