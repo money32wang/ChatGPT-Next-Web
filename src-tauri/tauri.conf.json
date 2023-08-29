@@ -71,7 +71,7 @@
         "signingIdentity": null
       },
       "resources": [],
-      "shortDescription": "ChatGPT Web App",
+      "shortDescription": "Oh My IdeaTalk App",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,
@@ -98,7 +98,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "ChatGPT Web",
+        "title": "Oh My IdeaTalk",
         "width": 960,
         "hiddenTitle": true,
         "titleBarStyle": "Overlay"
