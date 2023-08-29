@@ -148,14 +148,14 @@ const id: PartialLocaleType = {
       SubTitle: "Pesan baru akan diisi menggunakan template ini",
     },
 
-    Update: {
-      Version: (x: string) => `Version: ${x}`,
-      IsLatest: "Versi terbaru",
-      CheckUpdate: "Periksa Pembaruan",
-      IsChecking: "Memeriksa pembaruan...",
-      FoundUpdate: (x: string) => `Versi terbaru ditemukan: ${x}`,
-      GoToUpdate: "Perbarui Sekarang",
-    },
+    // Update: {
+    //   Version: (x: string) => `Version: ${x}`,
+    //   IsLatest: "Versi terbaru",
+    //   CheckUpdate: "Periksa Pembaruan",
+    //   IsChecking: "Memeriksa pembaruan...",
+    //   FoundUpdate: (x: string) => `Versi terbaru ditemukan: ${x}`,
+    //   GoToUpdate: "Perbarui Sekarang",
+    // },
     AutoGenerateTitle: {
       Title: "Hasilkan Judul Otomatis",
       SubTitle: "Hasilkan judul yang sesuai berdasarkan konten percakapan",
@@ -205,29 +205,29 @@ const id: PartialLocaleType = {
       SubTitle:
         "Jika panjang pesan melebihi batas yang ditentukan, pesan tersebut akan dikompresi",
     },
-    Token: {
-      Title: "Kunci API",
-      SubTitle: "Gunakan kunci Anda untuk melewati batas kode akses",
-      Placeholder: "Kunci API OpenAI",
-    },
-    Usage: {
-      Title: "Saldo Akun",
-      SubTitle(used: any, total: any) {
-        return `Digunakan bulan ini: ${used}, total langganan: ${total}`;
-      },
-      IsChecking: "Memeriksa...",
-      Check: "Periksa",
-      NoAccess: "Masukkan kunci API untuk memeriksa saldo",
-    },
-    AccessCode: {
-      Title: "Kode Akses",
-      SubTitle: "Kontrol akses diaktifkan",
-      Placeholder: "Diperlukan kode akses",
-    },
-    Endpoint: {
-      Title: "Endpoint",
-      SubTitle: "Harus dimulai dengan http(s):// untuk endpoint kustom",
-    },
+    // Token: {
+    //   Title: "Kunci API",
+    //   SubTitle: "Gunakan kunci Anda untuk melewati batas kode akses",
+    //   Placeholder: "Kunci API OpenAI",
+    // },
+    // Usage: {
+    //   Title: "Saldo Akun",
+    //   SubTitle(used: any, total: any) {
+    //     return `Digunakan bulan ini: ${used}, total langganan: ${total}`;
+    //   },
+    //   IsChecking: "Memeriksa...",
+    //   Check: "Periksa",
+    //   NoAccess: "Masukkan kunci API untuk memeriksa saldo",
+    // },
+    // AccessCode: {
+    //   Title: "Kode Akses",
+    //   SubTitle: "Kontrol akses diaktifkan",
+    //   Placeholder: "Diperlukan kode akses",
+    // },
+    // Endpoint: {
+    //   Title: "Endpoint",
+    //   SubTitle: "Harus dimulai dengan http(s):// untuk endpoint kustom",
+    // },
     Model: "Model",
     Temperature: {
       Title: "Suhu",
