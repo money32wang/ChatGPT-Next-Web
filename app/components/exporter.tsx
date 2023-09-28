@@ -16,9 +16,10 @@ import { copyToClipboard, downloadAs, useMobileScreen } from "../utils";
 
 import CopyIcon from "../icons/copy.svg";
 import LoadingIcon from "../icons/three-dots.svg";
-import ChatGptIcon from "../icons/chatgpt.png";
+import ChatGptIcon from "../icons/crocodile-svgrepo-com.svg";
 import ShareIcon from "../icons/share.svg";
-import BotIcon from "../icons/bot.png";
+// import BotIcon from "../icons/bot.png";
+import BotIcon from "../icons/crocodile-svgrepo-com.png";
 
 import DownloadIcon from "../icons/download.svg";
 import { useEffect, useMemo, useRef, useState } from "react";
