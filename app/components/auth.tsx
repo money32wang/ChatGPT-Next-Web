@@ -46,20 +46,20 @@ export function AuthPage() {
           access.updateCode(e.currentTarget.value);
         }}
       />
-      {!access.hideUserApiKey ? (
-        <>
-          <div className={styles["auth-tips"]}>{Locale.Auth.SubTips}</div>
-          <input
-            className={styles["auth-input"]}
-            type="password"
-            placeholder={Locale.Settings.Token.Placeholder}
-            value={access.token}
-            onChange={(e) => {
-              access.updateToken(e.currentTarget.value);
-            }}
-          />
-        </>
-      ) : null}
+      {/*{!access.hideUserApiKey ? (*/}
+      {/*  <>*/}
+      {/*    <div className={styles["auth-tips"]}>{Locale.Auth.SubTips}</div>*/}
+      {/*    <input*/}
+      {/*      className={styles["auth-input"]}*/}
+      {/*      type="password"*/}
+      {/*      placeholder={Locale.Settings.Token.Placeholder}*/}
+      {/*      value={access.token}*/}
+      {/*      onChange={(e) => {*/}
+      {/*        access.updateToken(e.currentTarget.value);*/}
+      {/*      }}*/}
+      {/*    />*/}
+      {/*  </>*/}
+      {/*) : null}*/}
 
       <div className={styles["auth-actions"]}>
         <IconButton
