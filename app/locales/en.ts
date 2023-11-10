@@ -377,6 +377,7 @@ const en: LocaleType = {
   },
   Donate: {
     Name: "Buy Me a Coffee",
+    Modal: "Buy Xiao a coffee",
   },
   FineTuned: {
     Sysmessage: "You are an assistant that",
