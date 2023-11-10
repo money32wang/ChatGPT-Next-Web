@@ -375,6 +375,9 @@ const en: LocaleType = {
   Plugin: {
     Name: "Plugin",
   },
+  Donate: {
+    Name: "Buy Me a Coffee",
+  },
   FineTuned: {
     Sysmessage: "You are an assistant that",
   },

@@ -436,6 +436,24 @@ export function showImageModal(img: string) {
   });
 }
 
+export function showDonateModal(img: string) {
+  showModal({
+    title: Locale.Donate.Modal,
+    children: (
+      <div>
+        <img
+          src={img}
+          alt="preview"
+          style={{
+            maxWidth: "30%",
+          }}
+        ></img>
+      </div>
+    ),
+    defaultMax: false,
+  });
+}
+
 export function Selector<T>(props: {
   items: Array<{
     title: string;

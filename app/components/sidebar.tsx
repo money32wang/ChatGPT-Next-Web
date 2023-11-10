@@ -11,7 +11,9 @@ import CloseIcon from "../icons/close.svg";
 import DeleteIcon from "../icons/delete.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
+import Coffee from "../icons/svgviewer-output.svg";
 import DragIcon from "../icons/drag.svg";
+import Donate from "../../public/donate.png";
 
 import Locale from "../locales";
 
@@ -29,7 +31,12 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { isIOS, useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
-import { showConfirm, showToast } from "./ui-lib";
+import {
+  showConfirm,
+  showDonateModal,
+  showImageModal,
+  showToast,
+} from "./ui-lib";
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
@@ -180,10 +187,11 @@ export function SideBar(props: { className?: string }) {
           shadow
         />
         <IconButton
-          icon={<PluginIcon />}
-          text={shouldNarrow ? undefined : Locale.Plugin.Name}
+          icon={<Coffee />}
+          text={shouldNarrow ? undefined : Locale.Donate.Name}
           className={styles["sidebar-bar-button"]}
-          onClick={() => showToast(Locale.WIP)}
+          // onClick={() => showToast(Locale.WIP)}
+          onClick={() => showDonateModal("./IMG_4822.JPG")}
           shadow
         />
       </div>

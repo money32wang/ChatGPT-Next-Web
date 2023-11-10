@@ -369,6 +369,10 @@ const cn = {
   Plugin: {
     Name: "插件",
   },
+  Donate: {
+    Name: "打赏开发者",
+    Modal: "有逻辑的灵魂，" + "造就有温度的编码。",
+  },
   FineTuned: {
     Sysmessage: "你是一个助手",
   },
