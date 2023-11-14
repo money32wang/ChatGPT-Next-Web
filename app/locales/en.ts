@@ -376,7 +376,7 @@ const en: LocaleType = {
     Name: "Plugin",
   },
   Donate: {
-    Name: "Buy Me a Coffee",
+    Name: "Buy Me a Coffee?",
     Modal: "Buy Xiao a coffee",
   },
   FineTuned: {
@@ -446,8 +446,8 @@ const en: LocaleType = {
   },
   Exporter: {
     Description: {
-      Title: "Only messages after clearing the context will be displayed"
-    },  
+      Title: "Only messages after clearing the context will be displayed",
+    },
     Model: "Model",
     Messages: "Messages",
     Topic: "Topic",
