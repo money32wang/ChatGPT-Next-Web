@@ -12,6 +12,7 @@ import DeleteIcon from "../icons/delete.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
 import CocaCola from "../icons/svgviewer-output-cola.svg";
+import Coffee from "../icons/svgviewer-output.svg";
 import DragIcon from "../icons/drag.svg";
 import Donate from "../../public/donate.png";
 
@@ -187,7 +188,7 @@ export function SideBar(props: { className?: string }) {
           shadow
         />
         <IconButton
-          icon={<CocaCola />}
+          icon={Locale.Donate.Name.startsWith("B") ? <Coffee /> : <CocaCola />}
           text={shouldNarrow ? undefined : Locale.Donate.Name}
           className={styles["sidebar-bar-button"]}
           // onClick={() => showToast(Locale.WIP)}
