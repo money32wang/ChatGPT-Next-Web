@@ -11,7 +11,7 @@ import CloseIcon from "../icons/close.svg";
 import DeleteIcon from "../icons/delete.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
-import Coffee from "../icons/svgviewer-output.svg";
+import Coffee from "../icons/svgviewer-output-old.svg";
 import DragIcon from "../icons/drag.svg";
 import Donate from "../../public/donate.png";
 
