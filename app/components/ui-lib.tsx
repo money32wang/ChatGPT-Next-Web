@@ -9,6 +9,7 @@ import ConfirmIcon from "../icons/confirm.svg";
 import CancelIcon from "../icons/cancel.svg";
 import MaxIcon from "../icons/max.svg";
 import MinIcon from "../icons/min.svg";
+import ModelIcon from "../icons/svgviewer-output (5).svg";
 
 import Locale from "../locales";
 
@@ -439,10 +440,11 @@ export function showImageModal(img: string) {
 }
 
 export function showDonateModal(img: string) {
+  // @ts-ignore
   showModal({
     title: Locale.Donate.Modal,
     children: (
-      <div>
+      <div style={{ display: "flex" }}>
         <img
           src={img}
           alt="preview"
@@ -450,6 +452,26 @@ export function showDonateModal(img: string) {
             maxWidth: "30%",
           }}
         ></img>
+        <div className={styles["menu"]}>
+          <main>
+            <h1 className={styles["h1"]}>赞助榜单</h1>
+            <section>
+              <hr className={styles["hr"]} />
+              <img
+                className={styles["img"]}
+                src="./coffee.jpg"
+                alt="coffee icon"
+              />
+              <article className={styles["item"]}>
+                <p className={styles["flavor"]}>
+                  <ModelIcon />
+                  @建林
+                </p>
+                {/*<p className={styles["price"]}>10000000.00</p>*/}
+              </article>
+            </section>
+          </main>
+        </div>
       </div>
     ),
     defaultMax: false,

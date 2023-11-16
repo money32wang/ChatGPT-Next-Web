@@ -305,3 +305,55 @@
     }
   }
 }
+
+.menu {
+  width: 90%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1px;
+  max-width: 500px;
+}
+
+.h1 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: Impact, serif;
+}
+
+.h2 {
+  font-size: 14px;
+  text-align: center;
+  font-family: Impact, serif;
+}
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item p{
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.flavor{
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+.hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
+}
