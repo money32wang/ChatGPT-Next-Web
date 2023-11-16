@@ -454,7 +454,7 @@ export function showDonateModal(img: string) {
         ></img>
         <div className={styles["menu"]}>
           <main>
-            <h1 className={styles["h1"]}>赞助榜单</h1>
+            <h1 className={styles["h1"]}>赞助榜</h1>
             <section>
               <hr className={styles["hr"]} />
               <img
