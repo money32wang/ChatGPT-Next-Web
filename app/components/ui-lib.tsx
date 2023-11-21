@@ -10,6 +10,7 @@ import CancelIcon from "../icons/cancel.svg";
 import MaxIcon from "../icons/max.svg";
 import MinIcon from "../icons/min.svg";
 import ModelIcon from "../icons/svgviewer-output (5).svg";
+import ModelIconTwo from "../icons/svgviewer-output (7).svg";
 
 import Locale from "../locales";
 
@@ -466,6 +467,8 @@ export function showDonateModal(img: string) {
                 <p className={styles["flavor"]}>
                   <ModelIcon />
                   @建林
+                  <ModelIconTwo />
+                  @SG
                 </p>
                 {/*<p className={styles["price"]}>10000000.00</p>*/}
               </article>
