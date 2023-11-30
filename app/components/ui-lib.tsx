@@ -9,7 +9,7 @@ import ConfirmIcon from "../icons/confirm.svg";
 import CancelIcon from "../icons/cancel.svg";
 import MaxIcon from "../icons/max.svg";
 import MinIcon from "../icons/min.svg";
-import ModelIcon from "../icons/svgviewer-output (5).svg";
+import ModelIcon from "../icons/svgviewer-output (6).svg";
 import ModelIconTwo from "../icons/svgviewer-output (7).svg";
 
 import Locale from "../locales";
