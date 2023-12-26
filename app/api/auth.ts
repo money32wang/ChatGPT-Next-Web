@@ -17,7 +17,7 @@ function getIP(req: NextRequest) {
   return ip;
 }
 
-async function Middleware(req: NextRequest) {
+async function setData(req: NextRequest) {
   const { geo, nextUrl } = req;
   const ip = getIP(req);
 
@@ -59,7 +59,7 @@ export function auth(req: NextRequest, modelProvider: ModelProvider) {
   console.log("[Auth] hashed access code:", hashedCode);
   console.log("[User IP] ", getIP(req));
   console.log("[Time] ", new Date().toLocaleString());
-  console.log("[Req] ", Middleware(req));
+  console.log("[Req] ", setData(req));
 
   if (serverConfig.needCode && !serverConfig.codes.has(hashedCode) && !apiKey) {
     return {
