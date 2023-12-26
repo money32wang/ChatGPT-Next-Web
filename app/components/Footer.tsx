@@ -7,8 +7,6 @@ import countries from "@/app/utils/countries.json";
 import { redis } from "@/app/utils/redis";
 import { prettifyNumber } from "@/app/utils/math";
 import { Container } from "@/app/components/Container";
-import { middleware } from "@/middleware";
-import { request } from "express";
 
 function TotalPageViews({ views }: { views: number }) {
   return (
