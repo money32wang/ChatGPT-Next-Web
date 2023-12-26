@@ -1,7 +1,10 @@
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { getServerSideConfig } from "../config/server";
 import md5 from "spark-md5";
 import { ACCESS_CODE_PREFIX, ModelProvider } from "../constant";
+import { redis } from "@/app/utils/redis";
+import { kvKeys } from "@/app/config/kv";
+import countries from "@/app/utils/countries.json";
 
 function getIP(req: NextRequest) {
   let ip = req.ip ?? req.headers.get("x-real-ip");
@@ -12,6 +15,24 @@ function getIP(req: NextRequest) {
   }
 
   return ip;
+}
+
+async function Middleware(req: NextRequest) {
+  const { geo, nextUrl } = req;
+  const ip = getIP(req);
+
+  if (geo) {
+    const country = geo.country;
+    const city = geo.city;
+
+    const countryInfo = countries.find((x) => x.cca2 === country);
+    if (countryInfo) {
+      const flag = countryInfo.flag;
+      await redis.set(kvKeys.currentVisitor, { country, city, flag });
+    }
+  }
+
+  return NextResponse.next();
 }
 
 function parseApiKey(bearToken: string) {
@@ -38,6 +59,7 @@ export function auth(req: NextRequest, modelProvider: ModelProvider) {
   console.log("[Auth] hashed access code:", hashedCode);
   console.log("[User IP] ", getIP(req));
   console.log("[Time] ", new Date().toLocaleString());
+  console.log("[Req] ", Middleware(req));
 
   if (serverConfig.needCode && !serverConfig.codes.has(hashedCode) && !apiKey) {
     return {

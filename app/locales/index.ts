@@ -19,8 +19,11 @@ import bn from "./bn";
 import { merge } from "../utils/merge";
 
 import type { LocaleType } from "./cn";
+import React from "react";
 
 export type { LocaleType, PartialLocaleType } from "./cn";
+
+export type IconProps = React.SVGAttributes<SVGElement>;
 
 const ALL_LANGS = {
   cn,

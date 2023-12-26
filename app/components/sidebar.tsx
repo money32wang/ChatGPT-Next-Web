@@ -3,6 +3,7 @@ import { useEffect, useRef, useMemo } from "react";
 import styles from "./home.module.scss";
 
 import { IconButton } from "./button";
+import { Footer } from "@/app/components/Footer";
 import SettingsIcon from "../icons/settings.svg";
 import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/crocodile-svgrepo-com.svg";
@@ -253,6 +254,11 @@ export function SideBar(props: { className?: string }) {
         onPointerDown={(e) => onDragStart(e as any)}
       >
         <DragIcon />
+      </div>
+      <div className={styles["sidebar-header"]} data-tauri-drag-region>
+        <div className={styles["sidebar-sub-title"]}>
+          <Footer />
+        </div>
       </div>
     </div>
   );
