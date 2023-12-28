@@ -16,7 +16,6 @@
     "proxy-dev": "sh ./scripts/init-proxy.sh && proxychains -f ./scripts/proxychains.conf yarn dev"
   },
   "dependencies": {
-    "@clerk/backend": "^0.36.1",
     "@fortaine/fetch-event-source": "^3.0.6",
     "@hello-pangea/dnd": "^16.5.0",
     "@svgr/webpack": "^6.5.1",
@@ -30,7 +29,7 @@
     "html-to-image": "^1.11.11",
     "mermaid": "^10.6.1",
     "nanoid": "^5.0.3",
-    "next": "^13.4.7",
+    "next": "^13.4.9",
     "node-fetch": "^3.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -48,8 +47,7 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.5.8",
-    "@types/geoip-lite": "^1.4.4",
+    "@tauri-apps/cli": "1.5.7",
     "@types/node": "^20.9.0",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.7",
