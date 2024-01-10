@@ -164,14 +164,14 @@ const sk: PartialLocaleType = {
       SubTitle: "Najnovšia správa bude vyplnená do tejto šablóny",
     },
 
-    Update: {
-      Version: (x: string) => `Verzia: ${x}`,
-      IsLatest: "Najnovšia verzia",
-      CheckUpdate: "Skontrolovať aktualizácie",
-      IsChecking: "Kontrola aktualizácií...",
-      FoundUpdate: (x: string) => `Nájdená nová verzia: ${x}`,
-      GoToUpdate: "Aktualizovať",
-    },
+    // Update: {
+    //   Version: (x: string) => `Verzia: ${x}`,
+    //   IsLatest: "Najnovšia verzia",
+    //   CheckUpdate: "Skontrolovať aktualizácie",
+    //   IsChecking: "Kontrola aktualizácií...",
+    //   FoundUpdate: (x: string) => `Nájdená nová verzia: ${x}`,
+    //   GoToUpdate: "Aktualizovať",
+    // },
     SendKey: "Odoslať kľúč",
     Theme: "Motív",
     TightBorder: "Tesný okraj",
@@ -264,15 +264,15 @@ const sk: PartialLocaleType = {
         "Bude komprimované, ak dĺžka nekomprimovaných správ presiahne túto hodnotu",
     },
 
-    Usage: {
-      Title: "Stav účtu",
-      SubTitle(used: any, total: any) {
-        return `Tento mesiac použité ${used}, predplatné ${total}`;
-      },
-      IsChecking: "Kontroluje sa...",
-      Check: "Skontrolovať",
-      NoAccess: "Zadajte API kľúč na skontrolovanie zostatku",
-    },
+    // Usage: {
+    //   Title: "Stav účtu",
+    //   SubTitle(used: any, total: any) {
+    //     return `Tento mesiac použité ${used}, predplatné ${total}`;
+    //   },
+    //   IsChecking: "Kontroluje sa...",
+    //   Check: "Skontrolovať",
+    //   NoAccess: "Zadajte API kľúč na skontrolovanie zostatku",
+    // },
     Access: {
       AccessCode: {
         Title: "Prístupový kód",
