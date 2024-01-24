@@ -11,6 +11,7 @@ import MaxIcon from "../icons/max.svg";
 import MinIcon from "../icons/min.svg";
 import ModelIcon from "../icons/svgviewer-output (6).svg";
 import ModelIconTwo from "../icons/svgviewer-output (7).svg";
+import ModelIconThree from "../icons/svgviewer-output (8).svg";
 
 import Locale from "../locales";
 
@@ -469,6 +470,8 @@ export function showDonateModal(img: string) {
                   @建林
                   <ModelIconTwo />
                   @SG
+                  <ModelIconThree />
+                  @雷洋
                 </p>
                 {/*<p className={styles["price"]}>10000000.00</p>*/}
               </article>
