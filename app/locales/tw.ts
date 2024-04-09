@@ -291,12 +291,12 @@ const tw = {
     //       SubTitle: "使用自定義 OpenAI Key 繞過密碼訪問限制",
     //       Placeholder: "OpenAI API Key",
     //     },
-    //
-    //     Endpoint: {
-    //       Title: "接口(Endpoint) 地址",
-    //       SubTitle: "除默認地址外，必須包含 http(s)://",
-    //     },
+
+    //   Endpoint: {
+    //     Title: "接口(Endpoint) 地址",
+    //     SubTitle: "除默認地址外，必須包含 http(s)://",
     //   },
+    // },
     //   Azure: {
     //     ApiKey: {
     //       Title: "接口密鑰",
@@ -312,6 +312,23 @@ const tw = {
     //     ApiVerion: {
     //       Title: "接口版本 (azure api version)",
     //       SubTitle: "選擇指定的部分版本",
+    //     },
+    //   },
+    //   Anthropic: {
+    //     ApiKey: {
+    //       Title: "API 密鑰",
+    //       SubTitle: "從 Anthropic AI 獲取您的 API 密鑰",
+    //       Placeholder: "Anthropic API Key",
+    //     },
+    //
+    //     Endpoint: {
+    //       Title: "終端地址",
+    //       SubTitle: "示例：",
+    //     },
+    //
+    //     ApiVerion: {
+    //       Title: "API 版本 (claude api version)",
+    //       SubTitle: "選擇一個特定的 API 版本输入",
     //     },
     //   },
     //   Google: {
