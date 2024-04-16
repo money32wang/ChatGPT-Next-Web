@@ -29,7 +29,7 @@ export type IconProps = React.SVGAttributes<SVGElement>;
 const ALL_LANGS = {
   cn,
   en,
-  // tw,
+  tw,
   // pt,
   // jp,
   // ko,
@@ -56,7 +56,7 @@ export const ALL_LANG_OPTIONS: Record<Lang, string> = {
   cn: "简体中文",
   en: "English",
   // pt: "Português",
-  // tw: "繁體中文",
+  tw: "繁體中文",
   // jp: "日本語",
   // ko: "한국어",
   // id: "Indonesia",
