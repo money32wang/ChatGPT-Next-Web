@@ -172,14 +172,14 @@ const de: PartialLocaleType = {
         "Die neueste Nachricht des Benutzers wird in diese Vorlage eingefügt",
     },
 
-    Update: {
-      Version: (x: string) => `Aktuelle Version: ${x}`,
-      IsLatest: "Bereits die neueste Version",
-      CheckUpdate: "Auf Updates überprüfen",
-      IsChecking: "Überprüfe auf Updates...",
-      FoundUpdate: (x: string) => `Neue Version gefunden: ${x}`,
-      GoToUpdate: "Zum Update gehen",
-    },
+    // Update: {
+    //   Version: (x: string) => `Aktuelle Version: ${x}`,
+    //   IsLatest: "Bereits die neueste Version",
+    //   CheckUpdate: "Auf Updates überprüfen",
+    //   IsChecking: "Überprüfe auf Updates...",
+    //   FoundUpdate: (x: string) => `Neue Version gefunden: ${x}`,
+    //   GoToUpdate: "Zum Update gehen",
+    // },
     SendKey: "Sende-Taste",
     Theme: "Thema",
     TightBorder: "Randloser Modus",
@@ -277,16 +277,16 @@ const de: PartialLocaleType = {
         "Wenn die unkomprimierten historischen Nachrichten diesen Wert überschreiten, wird komprimiert",
     },
 
-    Usage: {
-      Title: "Guthabenabfrage",
-      SubTitle(used: any, total: any) {
-        return `In diesem Monat verwendet $${used}, Abonnement insgesamt $${total}`;
-      },
-      IsChecking: "Wird überprüft…",
-      Check: "Erneut überprüfen",
-      NoAccess:
-        "Geben Sie API-Schlüssel oder Zugangspasswort ein, um das Guthaben einzusehen",
-    },
+    // Usage: {
+    //   Title: "Guthabenabfrage",
+    //   SubTitle(used: any, total: any) {
+    //     return `In diesem Monat verwendet $${used}, Abonnement insgesamt $${total}`;
+    //   },
+    //   IsChecking: "Wird überprüft…",
+    //   Check: "Erneut überprüfen",
+    //   NoAccess:
+    //     "Geben Sie API-Schlüssel oder Zugangspasswort ein, um das Guthaben einzusehen",
+    // },
 
     Access: {
       AccessCode: {

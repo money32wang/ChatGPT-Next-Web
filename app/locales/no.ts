@@ -174,14 +174,14 @@ const no: PartialLocaleType = {
         "Den nyeste meldingen fra brukeren vil bli fylt ut i denne malen",
     },
 
-    Update: {
-      Version: (x: string) => `Nåværende versjon: ${x}`,
-      IsLatest: "Er den nyeste versjonen",
-      CheckUpdate: "Sjekk oppdateringer",
-      IsChecking: "Sjekker oppdateringer...",
-      FoundUpdate: (x: string) => `Ny versjon oppdaget: ${x}`,
-      GoToUpdate: "Gå til oppdatering",
-    },
+    // Update: {
+    //   Version: (x: string) => `Nåværende versjon: ${x}`,
+    //   IsLatest: "Er den nyeste versjonen",
+    //   CheckUpdate: "Sjekk oppdateringer",
+    //   IsChecking: "Sjekker oppdateringer...",
+    //   FoundUpdate: (x: string) => `Ny versjon oppdaget: ${x}`,
+    //   GoToUpdate: "Gå til oppdatering",
+    // },
     SendKey: "Send-knapp",
     Theme: "Tema",
     TightBorder: "Ingen ramme-modus",
@@ -275,15 +275,15 @@ const no: PartialLocaleType = {
         "Når ukomprimerte historiske meldinger overskrider denne verdien, vil de bli komprimert",
     },
 
-    Usage: {
-      Title: "Saldoforespørsel",
-      SubTitle(used: any, total: any) {
-        return `Brukt denne måneden $${used}, total abonnementsbeløp $${total}`;
-      },
-      IsChecking: "Sjekker...",
-      Check: "Sjekk på nytt",
-      NoAccess: "Skriv inn API-nøkkel eller tilgangspassord for å se saldo",
-    },
+    // Usage: {
+    //   Title: "Saldoforespørsel",
+    //   SubTitle(used: any, total: any) {
+    //     return `Brukt denne måneden $${used}, total abonnementsbeløp $${total}`;
+    //   },
+    //   IsChecking: "Sjekker...",
+    //   Check: "Sjekk på nytt",
+    //   NoAccess: "Skriv inn API-nøkkel eller tilgangspassord for å se saldo",
+    // },
 
     Access: {
       AccessCode: {

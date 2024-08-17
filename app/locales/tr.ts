@@ -169,14 +169,14 @@ const tr: PartialLocaleType = {
       SubTitle: "Kullanıcının en son mesajı bu şablona doldurulur",
     },
 
-    Update: {
-      Version: (x: string) => `Mevcut sürüm: ${x}`,
-      IsLatest: "En son sürüm",
-      CheckUpdate: "Güncellemeleri kontrol et",
-      IsChecking: "Güncellemeler kontrol ediliyor...",
-      FoundUpdate: (x: string) => `Yeni sürüm bulundu: ${x}`,
-      GoToUpdate: "Güncellemeye git",
-    },
+    // Update: {
+    //   Version: (x: string) => `Mevcut sürüm: ${x}`,
+    //   IsLatest: "En son sürüm",
+    //   CheckUpdate: "Güncellemeleri kontrol et",
+    //   IsChecking: "Güncellemeler kontrol ediliyor...",
+    //   FoundUpdate: (x: string) => `Yeni sürüm bulundu: ${x}`,
+    //   GoToUpdate: "Güncellemeye git",
+    // },
     SendKey: "Gönderme Tuşu",
     Theme: "Tema",
     TightBorder: "Sınır Yok Modu",
@@ -272,16 +272,16 @@ const tr: PartialLocaleType = {
         "Sıkıştırılmamış geçmiş mesaj bu değeri aştığında sıkıştırma yapılır",
     },
 
-    Usage: {
-      Title: "Bakiye Sorgulama",
-      SubTitle(used: any, total: any) {
-        return `Bu ay kullanılan $${used}, toplam abonelik ücreti $${total}`;
-      },
-      IsChecking: "Kontrol ediliyor…",
-      Check: "Yeniden kontrol et",
-      NoAccess:
-        "Bakiye görüntülemek için API Anahtarı veya erişim şifresi girin",
-    },
+    // Usage: {
+    //   Title: "Bakiye Sorgulama",
+    //   SubTitle(used: any, total: any) {
+    //     return `Bu ay kullanılan $${used}, toplam abonelik ücreti $${total}`;
+    //   },
+    //   IsChecking: "Kontrol ediliyor…",
+    //   Check: "Yeniden kontrol et",
+    //   NoAccess:
+    //     "Bakiye görüntülemek için API Anahtarı veya erişim şifresi girin",
+    // },
 
     Access: {
       AccessCode: {

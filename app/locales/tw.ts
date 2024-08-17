@@ -167,14 +167,14 @@ const tw = {
       SubTitle: "使用者最新的一條訊息會填充到此範本",
     },
 
-    Update: {
-      Version: (x: string) => `目前版本：${x}`,
-      IsLatest: "已是最新版本",
-      CheckUpdate: "檢查更新",
-      IsChecking: "正在檢查更新...",
-      FoundUpdate: (x: string) => `發現新版本：${x}`,
-      GoToUpdate: "前往更新",
-    },
+    // Update: {
+    //   Version: (x: string) => `目前版本：${x}`,
+    //   IsLatest: "已是最新版本",
+    //   CheckUpdate: "檢查更新",
+    //   IsChecking: "正在檢查更新...",
+    //   FoundUpdate: (x: string) => `發現新版本：${x}`,
+    //   GoToUpdate: "前往更新",
+    // },
     SendKey: "傳送鍵",
     Theme: "主題",
     TightBorder: "緊湊邊框",

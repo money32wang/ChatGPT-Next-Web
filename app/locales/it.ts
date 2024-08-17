@@ -176,14 +176,14 @@ const it: PartialLocaleType = {
         "L'ultimo messaggio dell'utente verrà inserito in questo modello",
     },
 
-    Update: {
-      Version: (x: string) => `Versione attuale: ${x}`,
-      IsLatest: "È l'ultima versione",
-      CheckUpdate: "Controlla aggiornamenti",
-      IsChecking: "Verifica aggiornamenti in corso...",
-      FoundUpdate: (x: string) => `Nuova versione trovata: ${x}`,
-      GoToUpdate: "Vai all'aggiornamento",
-    },
+    // Update: {
+    //   Version: (x: string) => `Versione attuale: ${x}`,
+    //   IsLatest: "È l'ultima versione",
+    //   CheckUpdate: "Controlla aggiornamenti",
+    //   IsChecking: "Verifica aggiornamenti in corso...",
+    //   FoundUpdate: (x: string) => `Nuova versione trovata: ${x}`,
+    //   GoToUpdate: "Vai all'aggiornamento",
+    // },
     SendKey: "Tasto di invio",
     Theme: "Tema",
     TightBorder: "Modalità senza bordi",
@@ -281,16 +281,16 @@ const it: PartialLocaleType = {
         "Quando i messaggi storici non compressi superano questo valore, verranno compressi",
     },
 
-    Usage: {
-      Title: "Verifica saldo",
-      SubTitle(used: any, total: any) {
-        return `Utilizzato questo mese $${used}, totale abbonamento $${total}`;
-      },
-      IsChecking: "Verifica in corso…",
-      Check: "Verifica di nuovo",
-      NoAccess:
-        "Inserisci API Key o password di accesso per visualizzare il saldo",
-    },
+    // Usage: {
+    //   Title: "Verifica saldo",
+    //   SubTitle(used: any, total: any) {
+    //     return `Utilizzato questo mese $${used}, totale abbonamento $${total}`;
+    //   },
+    //   IsChecking: "Verifica in corso…",
+    //   Check: "Verifica di nuovo",
+    //   NoAccess:
+    //     "Inserisci API Key o password di accesso per visualizzare il saldo",
+    // },
 
     Access: {
       AccessCode: {

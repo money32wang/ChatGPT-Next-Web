@@ -169,14 +169,14 @@ const jp: PartialLocaleType = {
       SubTitle: "最新のメッセージをこのテンプレートに埋め込む",
     },
 
-    Update: {
-      Version: (x: string) => `現在のバージョン：${x}`,
-      IsLatest: "最新バージョンです",
-      CheckUpdate: "更新を確認",
-      IsChecking: "更新を確認中...",
-      FoundUpdate: (x: string) => `新しいバージョンを発見：${x}`,
-      GoToUpdate: "更新へ進む",
-    },
+    // Update: {
+    //   Version: (x: string) => `現在のバージョン：${x}`,
+    //   IsLatest: "最新バージョンです",
+    //   CheckUpdate: "更新を確認",
+    //   IsChecking: "更新を確認中...",
+    //   FoundUpdate: (x: string) => `新しいバージョンを発見：${x}`,
+    //   GoToUpdate: "更新へ進む",
+    // },
     SendKey: "送信キー",
     Theme: "テーマ",
     TightBorder: "ボーダーレスモード",
@@ -269,15 +269,15 @@ const jp: PartialLocaleType = {
       SubTitle: "未圧縮の履歴メッセージがこの値を超えた場合、圧縮が行われます",
     },
 
-    Usage: {
-      Title: "残高確認",
-      SubTitle(used: any, total: any) {
-        return `今月の使用量 $${used}、サブスクリプション合計 $${total}`;
-      },
-      IsChecking: "確認中…",
-      Check: "再確認",
-      NoAccess: "APIキーまたはアクセスパスワードを入力して残高を確認",
-    },
+    // Usage: {
+    //   Title: "残高確認",
+    //   SubTitle(used: any, total: any) {
+    //     return `今月の使用量 $${used}、サブスクリプション合計 $${total}`;
+    //   },
+    //   IsChecking: "確認中…",
+    //   Check: "再確認",
+    //   NoAccess: "APIキーまたはアクセスパスワードを入力して残高を確認",
+    // },
 
     Access: {
       AccessCode: {

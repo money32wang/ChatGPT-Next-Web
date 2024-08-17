@@ -169,14 +169,14 @@ const vi: PartialLocaleType = {
       SubTitle: "Tin nhắn mới nhất của người dùng sẽ được điền vào mẫu này",
     },
 
-    Update: {
-      Version: (x: string) => `Phiên bản hiện tại: ${x}`,
-      IsLatest: "Đã là phiên bản mới nhất",
-      CheckUpdate: "Kiểm tra cập nhật",
-      IsChecking: "Đang kiểm tra cập nhật...",
-      FoundUpdate: (x: string) => `Tìm thấy phiên bản mới: ${x}`,
-      GoToUpdate: "Đi đến cập nhật",
-    },
+    // Update: {
+    //   Version: (x: string) => `Phiên bản hiện tại: ${x}`,
+    //   IsLatest: "Đã là phiên bản mới nhất",
+    //   CheckUpdate: "Kiểm tra cập nhật",
+    //   IsChecking: "Đang kiểm tra cập nhật...",
+    //   FoundUpdate: (x: string) => `Tìm thấy phiên bản mới: ${x}`,
+    //   GoToUpdate: "Đi đến cập nhật",
+    // },
     SendKey: "Phím gửi",
     Theme: "Giao diện",
     TightBorder: "Chế độ không viền",
@@ -270,15 +270,15 @@ const vi: PartialLocaleType = {
         "Khi tin nhắn lịch sử chưa nén vượt quá giá trị này, sẽ thực hiện nén",
     },
 
-    Usage: {
-      Title: "Tra cứu số dư",
-      SubTitle(used: any, total: any) {
-        return `Đã sử dụng trong tháng: $${used}, Tổng số đăng ký: $${total}`;
-      },
-      IsChecking: "Đang kiểm tra…",
-      Check: "Kiểm tra lại",
-      NoAccess: "Nhập khóa API hoặc mật khẩu truy cập để xem số dư",
-    },
+    // Usage: {
+    //   Title: "Tra cứu số dư",
+    //   SubTitle(used: any, total: any) {
+    //     return `Đã sử dụng trong tháng: $${used}, Tổng số đăng ký: $${total}`;
+    //   },
+    //   IsChecking: "Đang kiểm tra…",
+    //   Check: "Kiểm tra lại",
+    //   NoAccess: "Nhập khóa API hoặc mật khẩu truy cập để xem số dư",
+    // },
 
     Access: {
       AccessCode: {
