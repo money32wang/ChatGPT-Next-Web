@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 import styles from "./home.module.scss";
 
-import BotIcon from "../icons/crocodile-svgrepo-com.svg";
+import BotIcon from "../icons/bot.svg";
 import LoadingIcon from "../icons/three-dots.svg";
 
 import { getCSSVar, useMobileScreen } from "../utils";
@@ -136,34 +136,34 @@ function Screen() {
   }, []);
 
   return (
-    <div
-      className={
-        styles.container +
-        ` ${shouldTightBorder ? styles["tight-container"] : styles.container}
+      <div
+          className={
+              styles.container +
+              ` ${shouldTightBorder ? styles["tight-container"] : styles.container}
               `
-        // ${getLang() === "ar" ? styles["rtl-screen"] : ""}
-      }
-    >
-      {isAuth ? (
-        <>
-          <AuthPage />
-        </>
-      ) : (
-        <>
-          <SideBar className={isHome ? styles["sidebar-show"] : ""} />
+            // ${getLang() === "ar" ? styles["rtl-screen"] : ""}
+          }
+      >
+        {isAuth ? (
+            <>
+              <AuthPage/>
+            </>
+        ) : (
+            <>
+              <SideBar className={isHome ? styles["sidebar-show"] : ""}/>
 
-          <div className={styles["window-content"]} id={SlotID.AppBody}>
-            <Routes>
-              <Route path={Path.Home} element={<Chat />} />
-              <Route path={Path.NewChat} element={<NewChat />} />
-              <Route path={Path.Masks} element={<MaskPage />} />
-              <Route path={Path.Chat} element={<Chat />} />
-              <Route path={Path.Settings} element={<Settings />} />
-            </Routes>
-          </div>
-        </>
-      )}
-    </div>
+              <div className={styles["window-content"]} id={SlotID.AppBody}>
+                <Routes>
+                  <Route path={Path.Home} element={<Chat/>}/>
+                  <Route path={Path.NewChat} element={<NewChat/>}/>
+                  <Route path={Path.Masks} element={<MaskPage/>}/>
+                  <Route path={Path.Chat} element={<Chat/>}/>
+                  <Route path={Path.Settings} element={<Settings/>}/>
+                </Routes>
+              </div>
+            </>
+        )}
+      </div>
   );
 }
 
