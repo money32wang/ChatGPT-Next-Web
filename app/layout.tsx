@@ -6,11 +6,11 @@ import { getClientConfig } from "./config/client";
 import type { Metadata, Viewport } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getServerSideConfig } from "./config/server";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 const serverConfig = getServerSideConfig();
 
 export const metadata: Metadata = {
-  title: "Oh My IdeaTalk",
+  title: "NextChat",
   description: "Your personal ChatGPT Chat Bot.",
   appleWebApp: {
     title: "NextChat",
@@ -41,7 +41,11 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
-        <link rel="manifest" href="/site.webmanifest"></link>
+        <link
+          rel="manifest"
+          href="/site.webmanifest"
+          crossOrigin="use-credentials"
+        ></link>
         <script src="/serviceWorkerRegister.js" defer></script>
         <script
           async
@@ -59,6 +63,11 @@ export default function RootLayout({
         {serverConfig?.gtmId && (
           <>
             <GoogleTagManager gtmId={serverConfig.gtmId} />
+          </>
+        )}
+        {serverConfig?.gaId && (
+          <>
+            <GoogleAnalytics gaId={serverConfig.gaId} />
           </>
         )}
       </body>

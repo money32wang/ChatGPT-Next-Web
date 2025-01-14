@@ -1,14 +1,20 @@
 import { getClientConfig } from "../config/client";
 import { SubmitKey } from "../store/config";
-
+import { SAAS_CHAT_UTM_URL } from "@/app/constant";
 const isApp = !!getClientConfig()?.isApp;
 
 const tw = {
   WIP: "此功能仍在開發中……",
   Error: {
     Unauthorized: isApp
-      ? "偵測到無效的 API Key，請前往[設定](/#/settings)頁面檢查 API Key 是否設定正確。"
-      : "存取密碼不正確或尚未填寫，請前往[登入](/#/auth)頁面輸入正確的存取密碼，或者在[設定](/#/settings)頁面填入你自己的 OpenAI API Key。",
+      ? `😆 對話遇到了一些問題，不用慌:
+    \\ 1️⃣ 想要無須設定開箱即用，[點選這裡立刻開啟對話 🚀](${SAAS_CHAT_UTM_URL})
+    \\ 2️⃣ 如果你想消耗自己的 OpenAI 資源，點選[這裡](/#/settings)修改設定 ⚙️`
+      : `😆 對話遇到了一些問題，不用慌:
+    \ 1️⃣ 想要無須設定開箱即用，[點選這裡立刻開啟對話 🚀](${SAAS_CHAT_UTM_URL})
+    \ 2️⃣ 如果你正在使用私有部署版本，點選[這裡](/#/auth)輸入存取金鑰 🔑
+    \ 3️⃣ 如果你想消耗自己的 OpenAI 資源，點選[這裡](/#/settings)修改設定 ⚙️
+ `,
   },
 
   Auth: {
@@ -18,6 +24,10 @@ const tw = {
     Input: "在此處填寫存取密碼",
     Confirm: "確認",
     Later: "稍候再說",
+    Return: "返回",
+    SaasTips: "設定太麻煩，想要立即使用",
+    TopTips:
+      "🥳 NextChat AI 首發優惠，立刻解鎖 OpenAI o1, GPT-4o, Claude-3.5 等最新的大型語言模型",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 則對話`,
@@ -43,6 +53,8 @@ const tw = {
       PinToastAction: "檢視",
       Delete: "刪除",
       Edit: "編輯",
+      RefreshTitle: "重新整理標題",
+      RefreshToast: "已傳送重新整理標題請求",
     },
     Commands: {
       new: "新建聊天",
@@ -81,6 +93,15 @@ const tw = {
       SaveAs: "另存新檔",
     },
     IsContext: "預設提示詞",
+    ShortcutKey: {
+      Title: "鍵盤快捷方式",
+      newChat: "開啟新聊天",
+      focusInput: "聚焦輸入框",
+      copyLastMessage: "複製最後一個回覆",
+      copyLastCode: "複製最後一個程式碼區塊",
+      showShortcutKey: "顯示快捷方式",
+      clearContext: "清除上下文",
+    },
   },
   Export: {
     Title: "將聊天記錄匯出為 Markdown",
@@ -153,13 +174,18 @@ const tw = {
       Title: "字型大小",
       SubTitle: "聊天內容的字型大小",
     },
+    FontFamily: {
+      Title: "聊天字型",
+      SubTitle: "聊天內容的字型，若留空則套用全域預設字型",
+      Placeholder: "字型名稱",
+    },
     InjectSystemPrompts: {
       Title: "匯入系統提示",
       SubTitle: "強制在每個請求的訊息列表開頭新增一個模擬 ChatGPT 的系統提示",
     },
     InputTemplate: {
       Title: "使用者輸入預處理",
-      SubTitle: "使用者最新的一條訊息會填充到此範本",
+      SubTitle: "使用者最新的一則訊息會填充到此範本",
     },
 
     Update: {
@@ -241,7 +267,7 @@ const tw = {
       },
       List: "自訂提示詞列表",
       ListCount: (builtin: number, custom: number) =>
-      `內建 ${builtin} 條，使用者自訂 ${custom} 條`,
+        `內建 ${builtin} 條，使用者自訂 ${custom} 條`,
       Edit: "編輯",
       Modal: {
         Title: "提示詞列表",
@@ -270,91 +296,103 @@ const tw = {
     //   Check: "重新檢查",
     //   NoAccess: "輸入 API Key 檢視餘額",
     // },
-    //
-    // Access: {
-    //   AccessCode: {
-    //     Title: "存取密碼",
-    //     SubTitle: "管理員已開啟加密存取",
-    //     Placeholder: "請輸入存取密碼",
-    //   },
-    //   CustomEndpoint: {
-    //     Title: "自訂 API 端點 (Endpoint)",
-    //     SubTitle: "是否使用自訂 Azure 或 OpenAI 服務",
-    //   },
-    //   Provider: {
-    //     Title: "模型供應商",
-    //     SubTitle: "切換不同的服務供應商",
-    //   },
-    //   OpenAI: {
-    //     ApiKey: {
-    //       Title: "API Key",
-    //       SubTitle: "使用自訂 OpenAI Key 繞過密碼存取限制",
-    //       Placeholder: "OpenAI API Key",
-    //     },
-    //
-    //     Endpoint: {
-    //       Title: "API 端點 (Endpoint) 位址",
-    //       SubTitle: "除預設位址外，必須包含 http(s)://",
-    //     },
-    //   },
-    //   Azure: {
-    //     ApiKey: {
-    //       Title: "API 金鑰",
-    //       SubTitle: "使用自訂 Azure Key 繞過密碼存取限制",
-    //       Placeholder: "Azure API Key",
-    //     },
-    //
-    //     Endpoint: {
-    //       Title: "API 端點 (Endpoint) 位址",
-    //       SubTitle: "範例：",
-    //     },
-    //
-    //     ApiVerion: {
-    //       Title: "API 版本 (azure api version)",
-    //       SubTitle: "指定一個特定的 API 版本",
-    //     },
-    //   },
-    //   Anthropic: {
-    //     ApiKey: {
-    //       Title: "API 金鑰",
-    //       SubTitle: "從 Anthropic AI 取得您的 API 金鑰",
-    //       Placeholder: "Anthropic API Key",
-    //     },
-    //
-    //     Endpoint: {
-    //       Title: "端點位址",
-    //       SubTitle: "範例：",
-    //     },
-    //
-    //     ApiVerion: {
-    //       Title: "API 版本 (claude api version)",
-    //       SubTitle: "指定一個特定的 API 版本",
-    //     },
-    //   },
-    //   Google: {
-    //     ApiKey: {
-    //       Title: "API 金鑰",
-    //       SubTitle: "從 Google AI 取得您的 API 金鑰",
-    //       Placeholder: "輸入您的 Google AI Studio API 金鑰",
-    //     },
-    //
-    //     Endpoint: {
-    //       Title: "端點位址",
-    //       SubTitle: "範例：",
-    //     },
-    //
-    //     ApiVersion: {
-    //       Title: "API 版本（僅適用於 gemini-pro）",
-    //       SubTitle: "選擇一個特定的 API 版本",
-    //     },
-    //   },
-    //   CustomModel: {
-    //     Title: "自訂模型名稱",
-    //     SubTitle: "增加自訂模型可選擇項目，使用英文逗號隔開",
-    //   },
-    // },
+
+    Access: {
+      SaasStart: {
+        Title: "使用 NextChat AI",
+        Label: "(性價比最高的方案)",
+        SubTitle:
+          "由 NextChat 官方維護，無須設定開箱即用，支援 OpenAI o1、GPT-4o、Claude-3.5 等最新的大型語言模型",
+        ChatNow: "立刻開始對話",
+      },
+
+      AccessCode: {
+        Title: "存取密碼",
+        SubTitle: "管理員已開啟加密存取",
+        Placeholder: "請輸入存取密碼",
+      },
+      CustomEndpoint: {
+        Title: "自訂 API 端點 (Endpoint)",
+        SubTitle: "是否使用自訂 Azure 或 OpenAI 服務",
+      },
+      Provider: {
+        Title: "模型供應商",
+        SubTitle: "切換不同的服務供應商",
+      },
+      OpenAI: {
+        ApiKey: {
+          Title: "API Key",
+          SubTitle: "使用自訂 OpenAI Key 繞過密碼存取限制",
+          Placeholder: "OpenAI API Key",
+        },
+
+        Endpoint: {
+          Title: "API 端點 (Endpoint) 位址",
+          SubTitle: "除預設位址外，必須包含 http(s)://",
+        },
+      },
+      Azure: {
+        ApiKey: {
+          Title: "API 金鑰",
+          SubTitle: "使用自訂 Azure Key 繞過密碼存取限制",
+          Placeholder: "Azure API Key",
+        },
+
+        Endpoint: {
+          Title: "API 端點 (Endpoint) 位址",
+          SubTitle: "範例：",
+        },
+
+        ApiVerion: {
+          Title: "API 版本 (azure api version)",
+          SubTitle: "指定一個特定的 API 版本",
+        },
+      },
+      Anthropic: {
+        ApiKey: {
+          Title: "API 金鑰",
+          SubTitle: "從 Anthropic AI 取得您的 API 金鑰",
+          Placeholder: "Anthropic API Key",
+        },
+
+        Endpoint: {
+          Title: "端點位址",
+          SubTitle: "範例：",
+        },
+
+        ApiVerion: {
+          Title: "API 版本 (claude api version)",
+          SubTitle: "指定一個特定的 API 版本",
+        },
+      },
+      Google: {
+        ApiKey: {
+          Title: "API 金鑰",
+          SubTitle: "從 Google AI 取得您的 API 金鑰",
+          Placeholder: "輸入您的 Google AI Studio API 金鑰",
+        },
+
+        Endpoint: {
+          Title: "端點位址",
+          SubTitle: "範例：",
+        },
+
+        ApiVersion: {
+          Title: "API 版本（僅適用於 gemini-pro）",
+          SubTitle: "選擇一個特定的 API 版本",
+        },
+      },
+      CustomModel: {
+        Title: "自訂模型名稱",
+        SubTitle: "增加自訂模型可選擇項目，使用英文逗號隔開",
+      },
+    },
 
     Model: "模型 (model)",
+    CompressModel: {
+      Title: "壓縮模型",
+      SubTitle: "用於壓縮歷史記錄的模型",
+    },
     Temperature: {
       Title: "隨機性 (temperature)",
       SubTitle: "值越大，回應越隨機",
@@ -445,6 +483,21 @@ const tw = {
         SubTitle: "產生此角色範本的直達連結",
         Action: "複製連結",
       },
+    },
+  },
+  SearchChat: {
+    Name: "搜尋聊天記錄",
+    Page: {
+      Title: "搜尋聊天記錄",
+      Search: "輸入搜尋關鍵詞",
+      NoResult: "沒有找到結果",
+      NoData: "沒有資料",
+      Loading: "載入中",
+
+      SubTitle: (count: number) => `找到 ${count} 條結果`,
+    },
+    Item: {
+      View: "檢視",
     },
   },
   NewChat: {
